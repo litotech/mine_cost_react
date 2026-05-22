@@ -25,3 +25,10 @@ npm install # instala librería npm
 npm run dev  # levanta proyecto en http://localhost:5173/
 
 # En vercel https://mine-cost-react.vercel.app/
+
+
+# Acciones a realizar después de clonar repo:
+1. Instalar librerías npm install (se hace en la TERMINAL) node.js
+2. Hacer funcionar App.jsx con npm run dev, Local:   http://localhost:5173/
+3. Trabajar las fórmulas
+4. Supabase como base de datos

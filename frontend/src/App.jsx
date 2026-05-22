@@ -19,6 +19,7 @@ function App() {
         borderRadius: '32px',
         overflow: 'hidden',
         position: 'relative',
+        border: '1px solid rgba(255,255,255,0.05)'
       }}>
         <div style={{ position: 'relative', zIndex: 1, padding: '40px 28px 32px' }}>
 
@@ -45,37 +46,15 @@ function App() {
             </span>
           </div>
 
-          {/* Badges */}
-          <div style={{ display: 'flex', gap: '8px', marginBottom: '28px', flexWrap: 'wrap' }}>
-            {[
-              { label: 'Minería Aurífera', color: '#eab308', border: 'rgba(234,179,8,0.3)', bg: 'rgba(234,179,8,0.07)' },
-              { label: 'Transformación Digital', color: '#2dd4bf', border: 'rgba(45,212,191,0.3)', bg: 'rgba(45,212,191,0.07)' },
-              { label: 'Investigación', color: 'rgba(255,255,255,0.45)', border: 'rgba(255,255,255,0.12)', bg: 'transparent' },
-            ].map((b) => (
-              <span key={b.label} style={{ fontSize: '10px', fontWeight: 500, letterSpacing: '1px', textTransform: 'uppercase', padding: '4px 10px', borderRadius: '20px', border: `1px solid ${b.border}`, color: b.color, background: b.bg }}>
-                {b.label}
-              </span>
-            ))}
-          </div>
-
-          {/* Título */}
+          {/* Título Actualizado */}
           <div style={{ marginBottom: '28px' }}>
             <h1 style={{ fontFamily: "'Playfair Display', serif", fontSize: '26px', fontWeight: 600, color: '#fff', lineHeight: 1.25, marginBottom: '10px' }}>
-              Optimización de <span style={{ color: '#eab308' }}>Costos</span> y Gobernanza Comercial
+              Panel de Control y <span style={{ color: '#eab308' }}>Módulos</span> Operativos
             </h1>
             <div style={{ width: 40, height: 2, background: 'linear-gradient(90deg,#eab308,transparent)', borderRadius: 2, marginBottom: 14 }} />
             <p style={{ fontSize: '13px', lineHeight: 1.7, color: 'rgba(255,255,255,0.55)', fontWeight: 300 }}>
-              Plataforma digital integral para la gestión financiera y la transparencia comercial en el sector minero de oro.
+              Selecciona una sección para gestionar el flujo logístico, comercial y de auditoría financiera.
             </p>
-          </div>
-
-          {/* Keywords */}
-          <div style={{ display: 'flex', flexWrap: 'wrap', gap: '6px', margin: '20px 0 28px' }}>
-            {['Gestión de costos', 'Comercialización de oro', 'Minería sostenible', 'Eficiencia operativa'].map((k) => (
-              <span key={k} style={{ fontSize: '11px', color: 'rgba(234,179,8,0.8)', background: 'rgba(234,179,8,0.06)', border: '1px solid rgba(234,179,8,0.15)', padding: '3px 9px', borderRadius: '20px' }}>
-                {k}
-              </span>
-            ))}
           </div>
 
           {/* Objetivos */}
@@ -99,31 +78,75 @@ function App() {
               <div key={o.letra} style={{ display: 'flex', gap: '10px', alignItems: 'flex-start', marginBottom: '10px', textAlign: 'left' }}>
                 <div style={{ width: 24, height: 24, borderRadius: '6px', background: o.bg, display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0 }}>
                   <span style={{ fontSize: '11px', fontWeight: 600, color: o.color }}>{o.letra}</span>
-            </div>
+                </div>
                 <p style={{ fontSize: '12px', color: 'rgba(255,255,255,0.55)', lineHeight: 1.5, margin: 0 }}>{o.texto}</p>  
               </div>
             ))}
           </div>
 
           {/* Stats */}
-          <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr 1fr', gap: '10px', marginBottom: '24px' }}>
-            {[{ num: '6', label: 'meses dev' }, { num: '5', label: 'módulos' }, { num: '↓', label: 'errores costo' }].map((s) => (
+          <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr 1fr', gap: '10px', marginBottom: '28px' }}>
+            {[{ num: '5', label: 'módulos activos' }, { num: '2026', label: 'versión actual' }, { num: '100%', label: 'trazabilidad' }].map((s) => (
               <div key={s.label} style={{ background: 'rgba(255,255,255,0.03)', border: '1px solid rgba(255,255,255,0.07)', borderRadius: '12px', padding: '14px 12px', textAlign: 'center' }}>
-                <span style={{ fontFamily: "'Playfair Display', serif", fontSize: '20px', fontWeight: 600, color: '#eab308', display: 'block' }}>{s.num}</span>
+                <span style={{ fontFamily: "'Playfair Display', serif", fontSize: '18px', fontWeight: 600, color: '#eab308', display: 'block' }}>{s.num}</span>
                 <span style={{ fontSize: '10px', color: 'rgba(255,255,255,0.4)', marginTop: '4px', display: 'block' }}>{s.label}</span>
               </div>
             ))}
           </div>
 
-          {/* Botones */}
-          <button style={{ width: '100%', background: 'linear-gradient(135deg,#eab308,#ca8a04)', border: 'none', borderRadius: '14px', padding: '16px', fontSize: '15px', fontWeight: 500, color: '#0d1117', cursor: 'pointer' }}>
-            Explorar la plataforma ↗
-          </button>
-          <button style={{ width: '100%', background: 'transparent', border: '1px solid rgba(255,255,255,0.12)', borderRadius: '14px', padding: '14px', fontSize: '14px', color: 'rgba(255,255,255,0.55)', cursor: 'pointer', marginTop: '10px' }}>
-            Ver metodología
-          </button>
+          {/* Sección de Nuevos Botones de Módulos (Grid Layout) */}
+          <div style={{ display: 'flex', flexDirection: 'column', gap: '10px', marginBottom: '10px' }}>
+            
+            {/* Los 4 primeros en cuadrícula 2x2 */}
+            <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '10px' }}>
+              {[
+                { name: 'Balance', desc: 'Flujo y stock' },
+                { name: 'Transporte', desc: 'Logística de carga' },
+                { name: 'Ventas', desc: 'Comercialización' },
+                { name: 'Finanzas', desc: 'Costos y margen' }
+              ].map((mod) => (
+                <button 
+                  key={mod.name} 
+                  style={{
+                    background: 'rgba(255,255,255,0.03)',
+                    border: '1px solid rgba(255,255,255,0.08)',
+                    borderRadius: '16px',
+                    padding: '16px 14px',
+                    textAlign: 'left',
+                    cursor: 'pointer',
+                    transition: 'all 0.2s ease'
+                  }}
+                >
+                  <div style={{ color: '#eab308', fontSize: '14px', fontWeight: 500, marginBottom: '4px' }}>{mod.name}</div>
+                  <div style={{ color: 'rgba(255,255,255,0.35)', fontSize: '11px' }}>{mod.desc}</div>
+                </button>
+              ))}
+            </div>
 
-          <p style={{ textAlign: 'center', marginTop: '20px', fontSize: '11px', color: 'rgba(255,255,255,0.2)' }}>
+            {/* Botón de Reportes destacado al ancho completo */}
+            <button 
+              style={{
+                width: '100%',
+                background: 'linear-gradient(135deg, #eab308, #ca8a04)',
+                border: 'none',
+                borderRadius: '16px',
+                padding: '16px',
+                fontSize: '15px',
+                fontWeight: 600,
+                color: '#0d1117',
+                cursor: 'pointer',
+                display: 'flex',
+                justifyContent: 'space-between',
+                alignItems: 'center',
+                boxShadow: '0 4px 12px rgba(234, 179, 8, 0.15)'
+              }}
+            >
+              <span>Generar Reportes Globales</span>
+              <span>📊</span>
+            </button>
+          </div>
+
+          <p style={{ textAlign: 'center', marginTop: '28px', fontSize: '11px', color: 'rgba(255,255,255,0.2)' }}>
             MineCost by LitoTech · Lima, 2026
           </p>
 

@@ -27,14 +27,15 @@ npm run dev  # levanta proyecto en http://localhost:5173/
 # En vercel https://mine-cost-react.vercel.app/ (muestra)
 
 
+```
 # Acciones a realizar después de clonar repo:
 1. Instalar librerías npm install (se hace en la TERMINAL) node.js (eso está listo)
-2. Hacer funcionar App.jsx con "npm run dev", Local:   http://localhost:5173/ (frontend) *
-3. Trabajar las fórmulas
-4. Supabase como base de datos
-5. Prender el servidor con: "node server.js" (backend) *
+2. Prender el servidor con: "node server.js" (backend) *
+3. Hacer funcionar App.jsx con "npm run dev", Local:   http://localhost:5173/ (frontend) *
+4. Trabajar las fórmulas
+5. Supabase como base de datos
+
 La carga masiva debe subir de esta forma (.csv):
-```
 Dia;Hrs_Op;TMH_Trat;Humedad_Porc;Ley_Cabeza;Espiral_Ley;Espiral_TMS;Icon_Ley;Icon_TMS;Flotacion_Ley;Flotacion_TMS;Ley_Relave
 1;Mañana;7.84;2.33;3.37;;0;842.34;0.01;67.09;0.22;0.38
 1;Tarde;30.94;2.58;5.68;;0;7028.8;0.015;427.6;0.11;0.55
